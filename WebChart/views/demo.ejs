@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!--[if lt IE 9 ]><html class="no-js oldie" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
+<% include ./header.ejs %>
+
+<!-- home
+================================================== -->
+<section id="home" class="s-home target-section" data-parallax="scroll" data-natural-width=3000 data-natural-height=2000 data-position-y=center>
+
+    <div class="overlay"></div>
+    <div class="shadow-overlay"></div>
+
+    <!-- demo
+    ================================================== -->
+    <section id='demo_header' class="demo-content">
+
+        <div class="row home-content__content" height="800px">
+            
+            <div class="col-six tab-full" style="background:white;">
+              <h3 style="color:black;text-align:center;">Parameter</h3>
+
+              <div align="center" style="padding-top:2rem">
+                <form action="setting" method="post" id="param">
+                  <ul class="stats-tabs" style="position:center;">
+                    <li style="width:35%">
+                      <em>From</em></br>
+                      <input type="date" id="date-from" name="date-from" value="2019-01-15">
+                    </li>
+                    <li style="width:35%">
+                      <em>To</em></br>
+                      <input type="date" id="date-to" name="date-to" value="2019-01-15">
+                    </li>
+                    <li style="width:25%">
+                      <em>Gender</em>
+                      <select style="width:50%;" id="gender">
+                        <option value="all">All</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                      </select>
+                    </li>
+                  </ul>
+                  <input class="btn--primary" type="submit" value="Submit">
+                </form>
+              </div>
+            </div>
+
+            <div class="col-six tab-full" style="background:white;">
+                <div id="chart-container" align="center" style="margin:4rem">
+                  <canvas id="demoChart"></canvas>
+                </div>
+            </div>
+            
+        </div>
+        <div class="row">
+             <!-- end section-header -->
+        </div>
+    </section>
+
+</section> <!-- end s-home -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+<script src="js/demoResultChart.js"></script>
+<script src="js/demoRequest.js"></script>
+
+<% include ./footer.ejs %>
+
+</html>
