@@ -67,7 +67,7 @@ var demoResultChart = function(noisedData) {
 			        fontSize: 18
       	    },
       	    ticks: {
-			        min: 0,
+			        min: 40,
 			        max: 140,
 			        stepSize: 20
             }
